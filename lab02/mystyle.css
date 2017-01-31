@@ -7,6 +7,7 @@ body {
 #isleft {
     background-color: white;
     height: 100%;
+    width: 19%;
     overflow: auto;
     float: left;
 }
@@ -27,17 +28,19 @@ body {
 }
 
 ul {
+    text-align: center;
     list-style-type: none;
     margin: 0;
     padding: 0;
-    width: 25%;
-    background-color: #f1f1f1;
+    width: 19%;
+    background-color: gainsboro;
     position: fixed;
     height: 100%;
     overflow: auto;
 }
 
 li a {
+    font-size: 150%;
     display: block;
     color: #000;
     padding: 8px 16px;
@@ -45,8 +48,9 @@ li a {
 }
 
 li a.active {
-    background-color: #4CAF50;
+    background-color: #3D4B93;
     color: white;
+    font-size: 200%;
 }
 
 li a:hover:not(.active) {
