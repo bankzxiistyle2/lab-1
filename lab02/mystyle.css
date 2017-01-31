@@ -7,13 +7,12 @@ body {
 #isleft {
     background-color: white;
     height: 100%;
-    width: 19%;
     overflow: visible;
     float: left;
 }
 
 #isright {
-    margin-left: 20%;
+    margin-left: 18%;
     background-color: white;
     height: 100%;
     overflow: auto;
@@ -31,7 +30,7 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    width: 19%;
+    width: 17%;
     background-color: #F0F0F0;
     position: fixed;
     height: 100%;
@@ -42,7 +41,7 @@ li a {
     font-size: 120%;
     display: block;
     color: #000;
-    padding: 10px 16px;
+    padding: 14px 16px;
     text-decoration: none;
     background-color: white;
 }
@@ -53,10 +52,18 @@ li a.active {
     font-size: 150%;
 }
 
+li a.active:hover {
+    text-shadow: 0px 0px 10px white, 0px 0px 15px white, 0px 0px 20px white;
+}
+
 li a:hover:not(.active) {
     background-color: #e6f0ff;
     color: blue;
-    font-weight: bold;
+}
+
+li a.footer {
+    margin-top: 130%;
+    border-radius: 10px;
 }
 
 .profile {
@@ -100,4 +107,8 @@ div.desc {
     margin-left: 10px;
     margin-bottom: 0px;
     font-size: 200%;
+}
+
+#labicon {
+    float: right;
 }
