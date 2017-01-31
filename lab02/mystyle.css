@@ -8,11 +8,12 @@ body {
     background-color: white;
     height: 100%;
     width: 19%;
-    overflow: auto;
+    overflow: visible;
     float: left;
 }
 
 #isright {
+    float: right;
     margin-left: 20%;
     background-color: white;
     height: 100%;
@@ -28,32 +29,37 @@ body {
 }
 
 ul {
-    text-align: center;
     list-style-type: none;
     margin: 0;
     padding: 0;
     width: 19%;
-    background-color: gainsboro;
+    background-color: #F0F0F0;
     position: fixed;
     height: 100%;
     overflow: auto;
 }
 
 li a {
-    font-size: 150%;
+    font-size: 120%;
     display: block;
     color: #000;
-    padding: 8px 16px;
+    padding: 10px 16px;
     text-decoration: none;
+    background-color: white;
 }
 
 li a.active {
-    background-color: #3D4B93;
+    background-color: #39406A;
     color: white;
-    font-size: 200%;
+    font-size: 150%;
 }
 
 li a:hover:not(.active) {
     background-color: #555;
     color: white;
+}
+
+.profile {
+    float: left;
+    width: 50px;
 }
