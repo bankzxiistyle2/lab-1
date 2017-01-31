@@ -62,7 +62,7 @@ li a:hover:not(.active) {
 }
 
 li a.footer {
-    margin-top: 130%;
+    margin-top: 100%;
     border-radius: 10px;
 }
 
