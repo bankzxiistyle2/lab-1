@@ -54,8 +54,9 @@ li a.active {
 }
 
 li a:hover:not(.active) {
-    background-color: #555;
-    color: white;
+    background-color: #e6f0ff;
+    color: blue;
+    font-weight: bold;
 }
 
 .profile {
@@ -86,4 +87,17 @@ div.desc {
 
 .fixsc {
     overflow: auto;
+}
+
+#title {
+    margin-left: 20px;
+    float: left;
+    font-size: 25 0%;
+    margin-bottom: 0px;
+}
+
+#titleicon {
+    margin-left: 10px;
+    margin-bottom: 0px;
+    font-size: 200%;
 }
