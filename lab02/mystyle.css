@@ -78,6 +78,10 @@ div.img {
     width: 300px;
 }
 
+#fiximg {
+    margin-top: 100px;
+}
+
 div.img:hover {
     border: 1px solid #777;
 }
@@ -111,4 +115,8 @@ div.desc {
 
 #labicon {
     float: right;
+}
+
+#tdrs {
+    width: 300px;
 }
