@@ -62,3 +62,12 @@ li a:hover:not(.active) {
     float: left;
     width: 50px;
 }
+
+div .galley {
+    float: left;
+}
+
+.galley img {
+    size: 30%;
+    margin: 4px;
+}

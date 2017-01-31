@@ -1,0 +1,18 @@
+<ul>
+                <li>
+                    <a class="active" href="Lab02.php">Lab02.php</a>
+                </li>
+                <li>
+                    <a href="../Lab01/aboutme.html">aboutme.html</a>
+                </li>
+                <li>
+                    <a href="timetable.php">timetable.php</a>
+                </li>
+                <li>
+                    <a href="enroll.php">enroll.php</a>
+                </li>
+                <li>
+                    <a href="gallery.php">gallery.php</a>
+                </li>
+
+            </ul>

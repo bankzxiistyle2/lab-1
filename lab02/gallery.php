@@ -10,26 +10,7 @@
 
     <div id="contranner">
         <div id="isleft">
-            <ul>
-                <li>
-                    <a class="active">Lab02</a>
-                </li>
-                <li>
-                    <a>aboutme.html</a>
-                </li>
-                <li>
-                    <a>timetable.html</a>
-                </li>
-                <li>
-                    <a>enroll.html</a>
-                </li>
-                <li>
-                    <a>gallery.html</a>
-                </li>
-                <li>
-                    <button type="button" onclick="loadDoc()">g</a>
-                </li>
-            </ul>
+            <?php include'menu.txt'; ?>
 
         </div>
 
@@ -52,13 +33,14 @@
                     <p>
                         อากาศหนาวแล้วเปลี่ยนเป็นชุดคอลเลคชั่นหน้าหนาว มาดำน้ำกลางหิมะด้วยกันนะค่ะ555<br> #aimikoo #pso2jp<br> #มีคนโดนแบน Kanthakran Kalawong<br>
                     </p>
-                    <img style="margin-bottom:3px " width="450" src="https://scontent.fbkk1-3.fna.fbcdn.net/v/t1.0-9/16386916_1439936759389679_732382251822081783_n.jpg?oh=cd704309268df9c99d76771fcf31c872&oe=5948E211">
+                    <div class="gallery">
+                    <img  width="450" src="https://scontent.fbkk1-3.fna.fbcdn.net/v/t1.0-9/16386916_1439936759389679_732382251822081783_n.jpg?oh=cd704309268df9c99d76771fcf31c872&oe=5948E211">
                     <img width="450" src="https://scontent.fbkk1-3.fna.fbcdn.net/v/t1.0-9/16388291_1439936872723001_6037578123128347541_n.jpg?oh=971568e00b612803fdee35ed8e6fa976&oe=5946247C">
                     <img style="margin-bottom:3px " width="450" src="https://scontent.fbkk1-3.fna.fbcdn.net/v/t1.0-9/16386916_1439936759389679_732382251822081783_n.jpg?oh=cd704309268df9c99d76771fcf31c872&oe=5948E211">
                     <img width="450" src="https://scontent.fbkk1-3.fna.fbcdn.net/v/t1.0-9/16388291_1439936872723001_6037578123128347541_n.jpg?oh=971568e00b612803fdee35ed8e6fa976&oe=5946247C">
                     <img style="margin-bottom:3px " width="450" src="https://scontent.fbkk1-3.fna.fbcdn.net/v/t1.0-9/16386916_1439936759389679_732382251822081783_n.jpg?oh=cd704309268df9c99d76771fcf31c872&oe=5948E211">
                     <img width="450" src="https://scontent.fbkk1-3.fna.fbcdn.net/v/t1.0-9/16388291_1439936872723001_6037578123128347541_n.jpg?oh=971568e00b612803fdee35ed8e6fa976&oe=5946247C">
-
+                    </div>
                 </div>
             </div>
         </div>
