@@ -2,7 +2,9 @@ body {
     background-color: #F0F0F0;
 }
 
-#contranner {}
+#contranner {
+    overflow: auto;
+}
 
 #isleft {
     background-color: white;
