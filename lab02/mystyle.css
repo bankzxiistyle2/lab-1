@@ -16,7 +16,7 @@ body {
 }
 
 #isright {
-    margin-left: 245px;
+    margin-left: 18%;
     background-color: white;
     height: 100%;
     overflow: auto;
@@ -35,7 +35,7 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    width: 230px;
+    width: 16.7%;
     background-color: #F0F0F0;
     position: fixed;
     height: 100%;
