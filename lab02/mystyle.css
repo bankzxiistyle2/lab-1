@@ -64,6 +64,7 @@ li a.active:hover {
 
 li a.isselect {
     background-color: #b3d1ff;
+    color: #000066;
 }
 
 li a:hover:not(.active):not(.isselect) {
