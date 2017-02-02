@@ -49,6 +49,7 @@ li a {
     padding: 14px 16px;
     text-decoration: none;
     background-color: white;
+    transition: all 0.3s;
 }
 
 li a.active {
@@ -61,7 +62,11 @@ li a.active:hover {
     text-shadow: 0px 0px 10px white, 0px 0px 15px white, 0px 0px 20px white;
 }
 
-li a:hover:not(.active) {
+li a.isselect {
+    background-color: #b3d1ff;
+}
+
+li a:hover:not(.active):not(.isselect) {
     background-color: #e6f0ff;
     color: blue;
 }
@@ -89,6 +94,7 @@ div.img {
 
 div.img:hover {
     border: 1px solid #777;
+    transition: all 0.2s;
 }
 
 div.img img {
