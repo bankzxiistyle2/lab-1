@@ -82,7 +82,6 @@ li a.footer {
 }
 
 li a.footer:hover {
-    border-width: 1px;
     border-color: dimgray;
     border-style: dashed;
 }
