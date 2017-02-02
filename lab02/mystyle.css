@@ -75,6 +75,14 @@ li a:hover:not(.active):not(.isselect) {
 li a.footer {
     margin-top: 100%;
     border-radius: 10px;
+    border-color: white;
+    border-style: dashed;
+}
+
+li a.footer:hover {
+    border-width: 1px;
+    border-color: dimgray;
+    border-style: dashed;
 }
 
 .profile {
