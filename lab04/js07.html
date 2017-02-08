@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <title>Check Browser</title>
+</head>
+
+<body>
+
+    <script language="Javascript">
+        d = document;
+
+        function windowHeight() {
+            if (d.body && d.body.clientHeight) {
+                return d.body.clientHeight;
+            } else if (window.innerHeight) {
+                return window.innerHeight;
+            } else {
+                return 0;
+            }
+        }
+        if (windowHeight() >= 300) {
+            d.location = "your html or http://";
+        } else {
+            d.location = "you html or http://";
+        }
+    </script>
+</body>
+
+</html>
