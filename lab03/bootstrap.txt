@@ -1,0 +1,8 @@
+<h1>Bootstrap</h1>
+<hr>
+<p>
+    Bootstrap คืออะไร?
+    <br>
+    -คือ framework คำสั่งสำเร็จรูป ของภาษา html,css,javascript เพื่อให้สามารถใช้งานได้ง่ายๆ
+
+</p>
