@@ -1,27 +1,24 @@
 <html>
 
 <head>
-    <title>Check Browser</title>
+    <title>re-direct based upon window size</title>
 </head>
 
 <body>
-
-    <script language="Javascript">
-        d = document;
-
+    <script language="JavaScript">
         function windowHeight() {
-            if (d.body && d.body.clientHeight) {
-                return d.body.clientHeight;
+            if (document.body && document.body.clientHeight) {
+                return document.body.clientHeight;
             } else if (window.innerHeight) {
                 return window.innerHeight;
             } else {
                 return 0;
             }
         }
-        if (windowHeight() >= 300) {
-            d.location = "your html or http://";
+        if (windowHeight() >= 500) {
+            document.location = "your html or https://www.facebook.com/";
         } else {
-            d.location = "you html or http://";
+            document.location = "your html or https://www.google.co.th/";
         }
     </script>
 </body>
