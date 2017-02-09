@@ -1,1 +1,101 @@
-my form 
+<h1>
+    Bootstrap Forms
+</h1>
+<h5><span class="glyphicon glyphicon-time"></span> Post by kanthakran kalawong, Sep 27, 2015.</h5>
+<span class="label label-danger">Html</span> <span class="label label-primary">Css</span> <span class="label label-warning">javascript</span>
+<hr>
+
+<h2>การตั้งค่าเริ่มต้นของ Bootstrap</h2>
+<br>
+<br>
+<p> - ค่าเริ่มต้นของ Bootstrap คำสั่ง ใน form นั้น
+    < input>,
+        < textarea>,
+            < select> จะใช้ class .form-control จะทำให้ width=100%
+</p>
+<br><br>
+<h2>
+    โดย form จะมี layout ต่างให้เลือกใช้
+</h2>
+<ul>
+    <li>Vertical form (this is default)</li>
+    <li>Horizontal form (class .form-horizontal .control-label)</li>
+    <li>Inline form (class .form-inline .sr-only)</li>
+</ul>
+<br>
+<br>
+<h2>Vertical (basic) form</h2>
+<form>
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter email">
+    </div>
+    <div class="form-group">
+        <label for="pwd">Password:</label>
+        <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+    </div>
+    <div class="checkbox">
+        <label><input type="checkbox"> Remember me</label>
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+</form>
+<br>
+<a style="color: white;" href="http://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_form_basic&stacked=h" target="_blank"><button type="button" class="btn btn-primary">view code</button></a>
+
+<br><br>
+<h2>Inline form</h2>
+<p class="tp">การกำหนดรูปแบบ inline form เป็นการทำให้คอนโทรลต่างๆ ของฟอร์มอยู่ในแถวเดียวกัน โดยโดยปกติแล้วหากเราไม่กำหนดค่า <code>.form-inline</code> ในแท็ก <code>&lt;form&gt;</code> คอนโทรลต่างๆ ของฟอ์มจะอยู่คนละแถว หรือคนละบรรทัด เหมือนกับตัวอย่างแรก แต่หากเรากำหนดค่า
+    <code>.form-inliine</code> เข้าไป คอนโทรลต่างๆ จะอยู่ในแถวเดียวกัน ในการทำ inline form นั้นเราจะต้องทำการกำหนดค่าความกว้างของคอนโทรล โดยการใช้สไตล์ซีทกำหนดค่า ซึ่งตัวอย่างจะใช้ <code>width</code> ในการกำหนดค่าความกว้างของคอนโทรล หากเราไม่กำหนดเบราเซอร์จะแสดงความกว้างเต็ม
+    <code>100%</code> ซึ่งจะไม่เห็นความแตกต่างในการใช้ <code>.form-inline</code> และหากเราไม่ต้องการให้แสดง <code>&lt;label&gt;</code> เราสามารถกำหนดคลาส <code>.sr-only</code> ให้กับ <code>&lt;label&gt;</code> ได้ ตัวอย่างการใช้งาน</p>
+<form class="form-inline">
+    <div class="form-group">
+        <label for="email">Email address:</label>
+        <input type="email" class="form-control" id="email">
+    </div>
+    <div class="form-group">
+        <label for="pwd">Password:</label>
+        <input type="password" class="form-control" id="pwd">
+    </div>
+    <div class="checkbox">
+        <label><input type="checkbox"> Remember me</label>
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+</form>
+<br>
+<a style="color: white;" href="http://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_form_inline&stacked=h" target="_blank"><button type="button" class="btn btn-primary">view code</button></a>
+
+<br>
+<bt>
+    <h2>Bootstrap Horizontal Form</h2>
+    <p class="tp">เราสามารถจัดกลุ่มของคอนโทรลกับลาเบล (Label)ให้อยู่ในลักษณะของคอลัมน์ โดยการใช้ <code>.form-horizontal</code> ร่วมกับกริด (Grid) และ <code>.form-group</code> ในการแบ่งคอลัมน์ ตัวอย่าง เช่น</p>
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="email">Email:</label>
+            <div class="col-sm-10">
+                <input type="email" class="form-control" id="email" placeholder="Enter email">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="pwd">Password:</label>
+            <div class="col-sm-10">
+                <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <div class="checkbox">
+                    <label><input type="checkbox"> Remember me</label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-default">Submit</button>
+            </div>
+        </div>
+    </form>
+    <br>
+    <a style="color: white;" href="http://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_form_horizontal&stacked=h" target="_blank"><button type="button" class="btn btn-primary">view code</button></a>
+
+    <hr>
+    <br>

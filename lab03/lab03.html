@@ -65,7 +65,7 @@
             document.getElementById("para").innerHTML =
                 xhttp.responseText;
         }
-        var lastId = ['1', '2', '3', '4'];
+        var lastId = ['1', '2', '3'];
 
 
         function changeActive(id) {
@@ -91,9 +91,9 @@
                 <h4>Lab03 by kanthakran</h4>
                 <ul class="nav nav-pills nav-stacked">
                     <li id="1" class="active" onclick="loadDoc('bootstrap.html',myFunction);changeActive('1')"><a>Bootstrap</a></li>
-                    <li id="2" onclick="loadDoc('grid.txt',myFunction);changeActive('2');"><a>Grid</a></li>
-                    <li id="3" onclick="loadDoc('form.txt',myFunction);changeActive('3')"><a>Form</a></li>
-                    <li id="4" onclick="changeActive('4')"><a>Contact me</a></li>
+                    <li id="2" onclick="loadDoc('grid.html',myFunction);changeActive('2');"><a>Grid</a></li>
+                    <li id="3" onclick="loadDoc('form.html',myFunction);changeActive('3')"><a>Form</a></li>
+
                 </ul><br>
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Search Blog..">
