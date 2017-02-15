@@ -1,0 +1,178 @@
+body {
+    background-color: #F0F0F0;
+    margin: 0px;
+}
+
+#contranner {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#isleft {
+    background-color: white;
+    height: 100%;
+    overflow: hidden;
+    float: left;
+    width: 220px;
+    display: block;
+}
+
+#isleft.toggle {
+    transition: 1s;
+    width: 0;
+}
+
+#isleft.show {
+    transition: 1s;
+    width: 220px;
+}
+
+.ggtoggle {
+    float: left;
+    cursor: pointer;
+    display: block;
+}
+
+.ggtoggle:hover {
+    background-color: wheat;
+}
+
+#isright {
+    transition: 1s;
+    margin-left: 240px;
+    background-color: white;
+    height: 100%;
+    width: 100%;
+}
+
+#isright.show {
+    width: 80%;
+    transition: 1s;
+}
+
+#isright.toggle {
+    width: 100%;
+    transition: 1s;
+    margin-left: 0px;
+}
+
+#myinner {
+    padding: 0px 10px 0px 10px;
+    overflow: auto;
+}
+
+.article {
+    margin-right: 50px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #F0F0F0;
+    height: 100%;
+    overflow: auto;
+}
+
+li a {
+    font-size: 100%;
+    display: block;
+    color: #000;
+    padding: 14px 16px;
+    text-decoration: none;
+    background-color: white;
+    transition: all 0.3s;
+}
+
+li a.active {
+    background-color: #39406A;
+    color: white;
+    font-size: 150%;
+}
+
+li a.active:hover {
+    text-shadow: 0px 0px 10px white, 0px 0px 15px white, 0px 0px 20px white;
+}
+
+li a.isselect {
+    background-color: #b3d1ff;
+    color: #000066;
+    text-shadow: 0px 0px 10px white, 0px 0px 15px white, 0px 0px 20px white;
+}
+
+li a:hover:not(.active):not(.isselect) {
+    background-color: #e6f0ff;
+    color: blue;
+}
+
+li a.footer {
+    margin-top: 200;
+    border-radius: 10px;
+    border-color: white;
+    border-style: dashed;
+}
+
+li a.footer:hover {
+    border-color: dimgray;
+    border-style: dashed;
+}
+
+.profile {
+    float: left;
+    width: 50px;
+}
+
+div.img {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 300px;
+}
+
+#fiximg {
+    margin-top: 100px;
+}
+
+div.img:hover {
+    border: 1px solid #777;
+    transition: all 0.2s;
+    border
+}
+
+div.img img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+.fixsc {
+    overflow: auto;
+}
+
+#title {
+    margin-left: 20px;
+    float: left;
+    font-size: 25 0%;
+    margin-bottom: 0px;
+}
+
+#titleicon {
+    margin-left: 10px;
+    margin-bottom: 0px;
+    font-size: 200%;
+}
+
+#labicon {
+    float: right;
+}
+
+#tdrs {
+    width: 300px;
+}

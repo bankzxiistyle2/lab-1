@@ -1,7 +1,89 @@
 <html>
 
 <head>
-    <title></title>
+    <title>Time Table</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="myLayout.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        var i = 0;
+
+        function toggle() {
+
+            if (i == 0) {
+                document.getElementById("isleft").className = "toggle";
+                document.getElementById("isright").className = "toggle";
+                i++;
+            } else {
+                document.getElementById("isleft").className = "show";
+                document.getElementById("isright").className = "show";
+                i--;
+            }
+        }
+    </script>
+
 </head>
+
+<body>
+
+    <div id="contranner">
+
+        <div id="isleft">
+
+            <ul>
+                <li>
+                    <a class="active" href="#lab02.html">Lab02.html<i id="labicon" class="fa fa-child"></i></a>
+                </li>
+                <li>
+                    <a href="https://angsila.informatics.buu.ac.th/~58160698/887371/lab01/aboutme.html">Aboutme</a>
+                </li>
+                <li>
+                    <a href="timetable.html">Timetable</a>
+                </li>
+                <li>
+                    <a href="enroll.html">Enroll</a>
+                </li>
+                <li>
+                    <a href="gallery.html">Gallery</a>
+                </li>
+
+                <li>
+                    <a class="footer" href="https://www.facebook.com/volumvolums">By.Kanthakran 58160698</a>
+                </li>
+
+            </ul>
+
+        </div>
+        <div class="ggtoggle" onclick="toggle()" style="height: 100%;">
+            <i class="fa fa-angle-right" style="margin:auto;font-size: 48px;color: darkblue"></i>
+        </div>
+        <div id="isright" class="show">
+
+            <div id="myinner">
+                <div>
+                    <h1 id="title"> Lab02</h1>
+                    <h2 id="titleicon" class="fa fa-television"></h2>
+                    <p>
+
+                    </p>
+                    <hr>
+                </div>
+
+                <div class="article">
+                    <p>
+                        <br> &nbsp;&nbsp;หัดเขียน Layout ทั้งหมดด้วยตัวเองครั้งแรก<br> และ เขียน mystyle.css แยก ครั้งแรก <b>#ควรเปิดในคอม</b><br> เขียน toggle menu ไม่เป็น
+                        <br> เขียน toggle menu ไม่เป็น<br> เขียน toggle menu ไม่เป็น
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+</body>
 
 </html>
