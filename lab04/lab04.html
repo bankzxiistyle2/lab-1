@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            position: relative;
+        }
+        
+        #inner {
+            padding-top: 50px;
+            width: 100vw;
+            height: 100vh;
+            color: #fff;
+            background-color: #1E88E5;
+        }
+    </style>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+      </button>
+                <a class="navbar-brand" href="#">Lab 04 javascript</a>
+            </div>
+            <div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li onclick="loadDoc('Lab04/tjs01.html',myFunction);"><a href="#js01">js 01</a></li>
+                        <li onclick="loadDoc('Lab04/tjs02.html',myFunction);"><a href="#js02">js 02</a></li>
+                        <li onclick="loadDoc('Lab04/tjs03.html',myFunction);"><a href="#js03">js 03</a></li>
+                        <li onclick="loadDoc('Lab04/tjs04.html',myFunction);"><a href="#js04">js 04</a></li>
+                        <li onclick="loadDoc('Lab04/tjs05.html',myFunction);"><a href="#js05">js 05</a></li>
+                        <li onclick="loadDoc('Lab04/tjs06.html',myFunction);"><a href="#js06">js 06</a></li>
+                        <li onclick="loadDoc('Lab04/tjs07.html',myFunction);"><a href="#js07">js 07</a></li>
+                        <li onclick="loadDoc('Lab04/tjs08.html',myFunction);"><a href="#js08">js 08</a></li>
+                        <li onclick="loadDoc('Lab04/tjs09.html',myFunction);"><a href="#js09">js 09</a></li>
+                        <li onclick="loadDoc('Lab04/tjs10.html',myFunction);"><a href="#js10">js 10</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="inner" class="container-fluid">
+        <h1>Section 1</h1>
+
+        <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+        <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+    </div>
+
+    <script>
+        function loadDoc(url, cFunction) {
+            var xhttp;
+            xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    cFunction(this);
+                }
+            };
+            xhttp.open("GET", url, true);
+            xhttp.send();
+        }
+
+        function myFunction(xhttp) {
+            document.getElementById("inner").innerHTML =
+                xhttp.responseText;
+        }
+    </script>
+
+</body>
+
+</html>
