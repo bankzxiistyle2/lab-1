@@ -18,7 +18,56 @@
             width: 100vw;
             height: 100vh;
             color: #fff;
-            background-color: #1E88E5;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            transition: all 1s;
+            overflow: auto;
+        }
+        
+        .home {
+            background-image: url("bg/01.jpg");
+        }
+        
+        .bgjs01 {
+            background-image: url("bg/02.jpg");
+        }
+        
+        .bgjs02 {
+            background-image: url("bg/03.jpg");
+        }
+        
+        .bgjs03 {
+            background-image: url("bg/04.jpg");
+        }
+        
+        .bgjs04 {
+            background-image: url("bg/05.jpg");
+        }
+        
+        .bgjs05 {
+            background-image: url("bg/06.jpg");
+        }
+        
+        .bgjs06 {
+            background-image: url("bg/07.jpg");
+        }
+        
+        .bgjs07 {
+            background-image: url("bg/08.jpg");
+        }
+        
+        .bgjs08 {
+            background-image: url("bg/09.jpg");
+        }
+        
+        .bgjs09 {
+            background-image: url("bg/10.jpg");
+        }
+        
+        .bgjs10 {
+            background-image: url("bg/01.jpg");
         }
     </style>
 </head>
@@ -32,21 +81,21 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>                        
       </button>
-                <a class="navbar-brand" href="#">Lab 04 javascript</a>
+                <a onclick="loadDoc('Lab04/home.html',myFunction);changeclass('home');" class="navbar-brand" href="#home">Lab 04 javascript</a>
             </div>
             <div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
-                        <li onclick="loadDoc('Lab04/tjs01.html',myFunction);"><a href="#js01">js 01</a></li>
-                        <li onclick="loadDoc('Lab04/tjs02.html',myFunction);"><a href="#js02">js 02</a></li>
-                        <li onclick="loadDoc('Lab04/tjs03.html',myFunction);"><a href="#js03">js 03</a></li>
-                        <li onclick="loadDoc('Lab04/tjs04.html',myFunction);"><a href="#js04">js 04</a></li>
-                        <li onclick="loadDoc('Lab04/tjs05.html',myFunction);"><a href="#js05">js 05</a></li>
-                        <li onclick="loadDoc('Lab04/tjs06.html',myFunction);"><a href="#js06">js 06</a></li>
-                        <li onclick="loadDoc('Lab04/tjs07.html',myFunction);"><a href="#js07">js 07</a></li>
-                        <li onclick="loadDoc('Lab04/tjs08.html',myFunction);"><a href="#js08">js 08</a></li>
-                        <li onclick="loadDoc('Lab04/tjs09.html',myFunction);"><a href="#js09">js 09</a></li>
-                        <li onclick="loadDoc('Lab04/tjs10.html',myFunction);"><a href="#js10">js 10</a></li>
+                        <li onclick="loadDoc('Lab04/tjs01.html',myFunction);changeclass('bgjs01');"><a href="#js01">js 01</a></li>
+                        <li onclick="loadDoc('Lab04/tjs02.html',myFunction);changeclass('bgjs02');"><a href="#js02">js 02</a></li>
+                        <li onclick="loadDoc('Lab04/tjs03.html',myFunction);changeclass('bgjs03');"><a href="#js03">js 03</a></li>
+                        <li onclick="loadDoc('Lab04/tjs04.html',myFunction);changeclass('bgjs04');"><a href="#js04">js 04</a></li>
+                        <li onclick="loadDoc('Lab04/tjs05.html',myFunction);changeclass('bgjs05');"><a href="#js05">js 05</a></li>
+                        <li onclick="loadDoc('Lab04/tjs06.html',myFunction);changeclass('bgjs06');"><a href="#js06">js 06</a></li>
+                        <li onclick="loadDoc('Lab04/tjs07.html',myFunction);changeclass('bgjs07');"><a href="#js07">js 07</a></li>
+                        <li onclick="loadDoc('Lab04/tjs08.html',myFunction);changeclass('bgjs08');"><a href="#js08">js 08</a></li>
+                        <li onclick="loadDoc('Lab04/tjs09.html',myFunction);changeclass('bgjs09');"><a href="#js09">js 09</a></li>
+                        <li onclick="loadDoc('Lab04/tjs10.html',myFunction);changeclass('bgjs10');"><a href="#js10">js 10</a></li>
 
                     </ul>
                 </div>
@@ -54,8 +103,14 @@
         </div>
     </nav>
 
-    <div id="inner" class="container-fluid">
+    <div id="inner" class="container-fluid bgjs01">
         <h1>Section 1</h1>
+        <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+        <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+        <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+        <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+        <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+        <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
 
         <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
         <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
@@ -77,6 +132,11 @@
         function myFunction(xhttp) {
             document.getElementById("inner").innerHTML =
                 xhttp.responseText;
+
+        }
+
+        function changeclass(c) {
+            document.getElementById("inner").className = "container-fluid " + c;
         }
     </script>
 
