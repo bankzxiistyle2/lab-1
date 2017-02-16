@@ -26,6 +26,36 @@
             overflow: auto;
         }
         
+        .changeCursor {
+            cursor: pointer;
+            cursor: hand;
+        }
+        
+        table.detil {
+            border-style: solid;
+            border-color: white;
+        }
+        
+        table.detil td {
+            font-size: 20px;
+            padding: 5px 10px 5px 10px;
+        }
+        
+        table.detil td img {
+            width: 500px;
+        }
+        
+        .title {
+            font-size: 50px;
+            font-weight: 10px;
+            font-family: myFirstFont;
+        }
+        
+        @font-face {
+            font-family: myFirstFont;
+            src: url(CURLZ___.TTF);
+        }
+        
         .home {
             background-image: url("bg/01.jpg");
         }
@@ -81,21 +111,21 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>                        
       </button>
-                <a onclick="loadDoc('Lab04/home.html',myFunction);changeclass('home');" class="navbar-brand" href="#home">Lab 04 javascript</a>
+                <a onclick="loadDoc('Lab04/home.html',myFunction);changeclass('home');" class="navbar-brand changeCursor">Lab 04 javascript</a>
             </div>
             <div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
-                        <li onclick="loadDoc('Lab04/tjs01.html',myFunction);changeclass('bgjs01');"><a href="#js01">js 01</a></li>
-                        <li onclick="loadDoc('Lab04/tjs02.html',myFunction);changeclass('bgjs02');"><a href="#js02">js 02</a></li>
-                        <li onclick="loadDoc('Lab04/tjs03.html',myFunction);changeclass('bgjs03');"><a href="#js03">js 03</a></li>
-                        <li onclick="loadDoc('Lab04/tjs04.html',myFunction);changeclass('bgjs04');"><a href="#js04">js 04</a></li>
-                        <li onclick="loadDoc('Lab04/tjs05.html',myFunction);changeclass('bgjs05');"><a href="#js05">js 05</a></li>
-                        <li onclick="loadDoc('Lab04/tjs06.html',myFunction);changeclass('bgjs06');"><a href="#js06">js 06</a></li>
-                        <li onclick="loadDoc('Lab04/tjs07.html',myFunction);changeclass('bgjs07');"><a href="#js07">js 07</a></li>
-                        <li onclick="loadDoc('Lab04/tjs08.html',myFunction);changeclass('bgjs08');"><a href="#js08">js 08</a></li>
-                        <li onclick="loadDoc('Lab04/tjs09.html',myFunction);changeclass('bgjs09');"><a href="#js09">js 09</a></li>
-                        <li onclick="loadDoc('Lab04/tjs10.html',myFunction);changeclass('bgjs10');"><a href="#js10">js 10</a></li>
+                        <li onclick="loadDoc('Lab04/tjs01.html',myFunction);changeclass('bgjs01');"><a class="changeCursor">js 01</a></li>
+                        <li onclick="loadDoc('Lab04/tjs02.html',myFunction);changeclass('bgjs02');"><a class="changeCursor">js 02</a></li>
+                        <li onclick="loadDoc('Lab04/tjs03.html',myFunction);changeclass('bgjs03');"><a class="changeCursor">js 03</a></li>
+                        <li onclick="loadDoc('Lab04/tjs04.html',myFunction);changeclass('bgjs04');"><a class="changeCursor">js 04</a></li>
+                        <li onclick="loadDoc('Lab04/tjs05.html',myFunction);changeclass('bgjs05');"><a class="changeCursor"> js 05</a></li>
+                        <li onclick="loadDoc('Lab04/tjs06.html',myFunction);changeclass('bgjs06');"><a class="changeCursor">js 06</a></li>
+                        <li onclick="loadDoc('Lab04/tjs07.html',myFunction);changeclass('bgjs07');"><a class="changeCursor">js 07</a></li>
+                        <li onclick="loadDoc('Lab04/tjs08.html',myFunction);changeclass('bgjs08');"><a class="changeCursor">js 08</a></li>
+                        <li onclick="loadDoc('Lab04/tjs09.html',myFunction);changeclass('bgjs09');"><a class="changeCursor">js 09</a></li>
+                        <li onclick="loadDoc('Lab04/tjs10.html',myFunction);changeclass('bgjs10');"><a class="changeCursor">js 10</a></li>
 
                     </ul>
                 </div>
