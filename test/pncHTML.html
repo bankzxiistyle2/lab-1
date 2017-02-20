@@ -1,0 +1,51 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <p>Input something in the input box:</p>
+
+    <textarea id="myTextarea" rows="4" cols="50"></textarea><br>
+    <button type="button" onclick="Endcode(document.getElementById('myTextarea').value)">Endcode</button>
+    <h1>Endcode</h1>
+
+    <code><xmp id="gg"></xmp></code>
+    <pre>
+タクリディアローブ玄
+＊霊刀雪姫
+＊ブラッドサイズ
+
+＊双魔銃剣アンフィスバエナ
+＊フィーの双銃剣
+
+和風茶屋制服　紅
+
+キャナリィピース鋼
+
+ビッグテイル　白
+
+
+女性イリヤボイス
+</pre>
+
+    <script>
+        function Endcode(str) {
+            var con = "";
+            for (i = 0; i < str.length; i++) {
+                if (str.charAt(i) == '<') {
+                    con += "&lt;";
+                } else if (str.charAt(i) == '>') {
+                    con += "&gt;";
+                } else {
+                    con += str.charAt(i);
+                }
+            }
+            document.getElementById("gg").innerHTML = con;
+        }
+    </script>
+</body>
+
+</html>
