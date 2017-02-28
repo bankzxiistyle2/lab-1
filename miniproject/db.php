@@ -27,8 +27,10 @@ class DB {
     public function query($sql){
         if ($this->result=mysqli_query($this->link, $sql)) {
    // echo "Database query successfully";
+   return true;
 } else {
     //echo "Error query database: " . $this->link->error;
+	return false;
 }
     }
     public function close_connect(){

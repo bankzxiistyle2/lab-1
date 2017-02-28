@@ -1,0 +1,35 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <p>Input something in the input box:</p>
+
+    <textarea id="myTextarea" rows="4" cols="50"></textarea><br>
+    <button type="button" onclick="Endcode(document.getElementById('myTextarea').value)">Endcode</button>
+    <h1>Endcode</h1>
+
+    <code><xmp id="gg"></xmp></code>
+
+    <script>
+        function Endcode(str) {
+            var con = "";
+            for (i = 0; i < str.length; i++) {
+                if (str.charAt(i) == '<') {
+                    con += "&lt;";
+                } else if (str.charAt(i) == '>') {
+                    con += "&gt;";
+                } else {
+                    con += str.charAt(i);
+                }
+            }
+            document.getElementById("gg").innerHTML = con;
+        }
+        document.write(document.childNodes);
+    </script>
+</body>
+
+</html>

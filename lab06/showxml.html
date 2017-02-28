@@ -1,0 +1,76 @@
+<html>
+
+<head>
+    <script>
+        function ajaxLoadXml() {
+            var ajax;
+            var txt, x, xx, i;
+            ajax = new XMLHttpRequest();
+            ajax.onreadystatechange = function() {
+                if (ajax.readyState == 4 && ajax.status == 200)
+                    txt = "<table border='1'><tr><th>Title</th><th>Artist</th></tr>";
+                x = ajax.responseXML.documentElement.getElementsByTagName("book");
+                for (i = 0; i < x.length; i++) {
+                    txt = txt + "<tr>";
+                    xx = x[i].getElementsByTagName("title"); {
+                        try {
+                            txt = txt + "<td>" + xx[0].firstChild.nodeValue + "</td>";
+                        } catch (er) {
+                            txt = txt + "<td></td>"
+                        }
+                    }
+                    xx = x[i].getElementsByTagName("publisher"); {
+                        try {
+                            txt = txt + "<td>" + xx[0].firstChild.nodeValue + "</td>";
+                        } catch (er) {
+                            txt = txt + "<td></td>"
+                        }
+                    }
+                    xx = x[i].getElementsByTagName("author"); {
+                        try {
+                            txt = txt + "<td>" + xx[0].firstChild.nodeValue + "</td>";
+                        } catch (er) {
+                            txt = txt + "<td></td>"
+                        }
+                    }
+                    xx = x[i].getElementsByTagName("cover"); {
+                        try {
+                            txt = txt + "<td><img src='" + xx[0].getAttribute("src") + "'>< /td>";
+                        } catch (er) {
+                            txt = txt + "<td></td>"
+                        }
+                    }
+                    xx = x[i].getElementsByTagName("blurb"); {
+                        try {
+                            txt = txt + "<td>" + xx[0].firstChild.nodeValue + "</td>";
+                        } catch (er) {
+                            txt = txt + "<td></td>"
+                        }
+
+                    }
+                    txt = txt + "</tr>";
+                }
+                txt = txt + "</table>";
+                document.getElementById('div1').innerHTML = txt;
+
+            }
+            ajax.open('GET', 'http://angsila.cs.buu.ac.th/~wittawas/592/887371/labs/get_xml.php', true);
+            ajax.send(null);
+        }
+    </script>
+</head>
+
+<body>
+    <div id="div1">
+        <h2>
+            Let AJAX Change this text
+        </h2>
+    </div>
+
+    <button type="button" onclick="ajaxLoadXml();">
+            Change Content
+        </button>
+
+</body>
+
+</html>
