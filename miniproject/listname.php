@@ -4,7 +4,7 @@
 
     $db=new MyPost ();
     $db->connect();
-    $db->query("select MyPost_name from MyPost group by MyPost_name");
+    $db->query("select MyPost_name from MyPost where MyPost_status='1' group by MyPost_name");
     
 
     //"id: " . $row["Post_id"]. 

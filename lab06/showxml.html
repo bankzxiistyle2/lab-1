@@ -2,60 +2,25 @@
 
 <head>
     <script>
-        function ajaxLoadXml() {
-            var ajax;
-            var txt, x, xx, i;
-            ajax = new XMLHttpRequest();
-            ajax.onreadystatechange = function() {
-                if (ajax.readyState == 4 && ajax.status == 200)
-                    txt = "<table border='1'><tr><th>Title</th><th>Artist</th></tr>";
-                x = ajax.responseXML.documentElement.getElementsByTagName("book");
-                for (i = 0; i < x.length; i++) {
-                    txt = txt + "<tr>";
-                    xx = x[i].getElementsByTagName("title"); {
-                        try {
-                            txt = txt + "<td>" + xx[0].firstChild.nodeValue + "</td>";
-                        } catch (er) {
-                            txt = txt + "<td></td>"
-                        }
-                    }
-                    xx = x[i].getElementsByTagName("publisher"); {
-                        try {
-                            txt = txt + "<td>" + xx[0].firstChild.nodeValue + "</td>";
-                        } catch (er) {
-                            txt = txt + "<td></td>"
-                        }
-                    }
-                    xx = x[i].getElementsByTagName("author"); {
-                        try {
-                            txt = txt + "<td>" + xx[0].firstChild.nodeValue + "</td>";
-                        } catch (er) {
-                            txt = txt + "<td></td>"
-                        }
-                    }
-                    xx = x[i].getElementsByTagName("cover"); {
-                        try {
-                            txt = txt + "<td><img src='" + xx[0].getAttribute("src") + "'>< /td>";
-                        } catch (er) {
-                            txt = txt + "<td></td>"
-                        }
-                    }
-                    xx = x[i].getElementsByTagName("blurb"); {
-                        try {
-                            txt = txt + "<td>" + xx[0].firstChild.nodeValue + "</td>";
-                        } catch (er) {
-                            txt = txt + "<td></td>"
-                        }
+        function loadXML() {
+            var xmlhttp = new XMLHttpRequest;
+            var txt = "";
+            xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
 
+                    var books = xmlhttp.responseXML.documentElement.getElementsByTagName("book");
+                    for (i = 0; i < books.length; i++) {
+                        txt += "<h3>" + books[i].getElementsByTagName('title')[0].firstChild.nodeValue + "</h3>";
+                        txt += books[i].getElementsByTagName('publisher')[0].firstChild.nodeValue;
+                        txt += "," + books[i].getElementsByTagName('author')[0].firstChild.nodeValue;
+                        txt += "<br><img src='" + books[i].getElementsByTagName('cover')[0].getAttribute('src') + "'>";
+                        txt += "<br>" + books[i].getElementsByTagName('blurb')[0].firstChild.nodeValue;
                     }
-                    txt = txt + "</tr>";
+                    document.getElementById('div1').innerHTML = txt;
                 }
-                txt = txt + "</table>";
-                document.getElementById('div1').innerHTML = txt;
-
             }
-            ajax.open('GET', 'http://angsila.cs.buu.ac.th/~wittawas/592/887371/labs/get_xml.php', true);
-            ajax.send(null);
+            xmlhttp.open("GET", "http://angsila.cs.buu.ac.th/~wittawas/592/887371/labs/get_xml.php", true);
+            xmlhttp.send();
         }
     </script>
 </head>
@@ -67,7 +32,7 @@
         </h2>
     </div>
 
-    <button type="button" onclick="ajaxLoadXml();">
+    <button type="button" onclick="loadXML();">
             Change Content
         </button>
 

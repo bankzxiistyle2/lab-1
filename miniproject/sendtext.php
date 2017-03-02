@@ -16,9 +16,12 @@
 </head>
 
 <body style="background-color: wheat;">
-    <div id='gg'>
-
-    </div>
+    <form method="post" action="chatpage.php" style='float:left;'>
+                    <textarea id="detil" name="detil"></textarea>
+                    <input id='name' name="name" type='hidden' value=<?php echo $_POST['name'] ?>>
+                    <input type="submit" name="submit" value="Send" id="contactSend" > gg
+                    </button>
+                </form>
     <script>
         function loadXMLDoc(myurl, id) {
             var xmlhttp;

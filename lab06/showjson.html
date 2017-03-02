@@ -2,28 +2,25 @@
 
 <head>
     <script>
-        function loadXMLDoc(kamkom, id) {
-            var xmlhttp;
-            if (window.XMLHttpRequest) {
-                // code for IE7+,firefox,Chome ,opere , safari
-                xmlhttp = new XMLHttpRequest();
-            } else {
-                //code for IE6 ,IE5
-                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-            }
+        function loadJSON() {
 
-            xmlhttp.onreadystatechange = function() {
+            var ajax = new XMLHttpRequest();
 
+            ajax.onreadystatechange = function() {
+                if (ajax.readyState == 4 && ajax.status == 200) {
+                    var data = "";
+                    var json = JSON.parse(ajax.responseText);
 
-                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                    document.getElementById(id).innerHTML = xmlhttp.responseText;
+                    for (i = 0; i < json.books.length; i++) {
+                        data += "<h3>" + json.books[i].book.title + "</h3>" + json.books[i].book.publisher + "," + json.books[i].book.author + "<br><img src='" + json.books[i].book.cover + "'><br>" + json.books[i].book.blurb;
+
+                    }
                 }
+                document.getElementById('div1').innerHTML = data;
             }
+            ajax.open("GET", "http://angsila.cs.buu.ac.th/~wittawas/592/887371/labs/get_json.php", true);
 
-            xmlhttp.open("GET", kamkom, true);
-
-            xmlhttp.send();
-
+            ajax.send();
         }
     </script>
 </head>
@@ -35,30 +32,9 @@
         </h2>
     </div>
 
-    <button type="button" onclick="loadXMLDoc('json.php','div1');">
+    <button type="button" onclick="loadJSON();">
             Change Content
         </button>
-    <script>
-        function loadJSON() {
-            var data = "";
-            var books = "json.php";
-            var ajax = new XMLHttpRequest();
-            xmlhttp.onreadystatechange = function() {
-                if (ajax.readyState == 4 && ajax.status == 200) {
-                    var json = JSON.parse(ajax.responseText);
-                    for (i = 0; i < json.books.lenght; i++) {
-                        document.getElementById('div1').innerHTML = json.books[i].title;
-                    }
-
-                }
-            }
-
-
-            ajax.open("GET", "json.php", true);
-
-            ajax.send();
-        }
-    </script>
 </body>
 
 </html>

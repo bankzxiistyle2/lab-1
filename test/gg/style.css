@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    background-color: #e6ffff;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.containner {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+ul.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #004d4d;
+    opacity: .5;
+}
+
+ul.nav:hover {
+    transition: .5s;
+    opacity: 1;
+}
+
+ul.nav:not(:hover) {
+    transition: .5s;
+}
+
+ul.nav li {
+    float: left;
+}
+
+ul.nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px 24px;
+    text-decoration: none;
+}
+
+ul.nav li a:hover:not(.active) {
+    color: white;
+    background-color: #009999;
+    transition: 0.2s;
+    opacity: 1;
+}
+
+ul.nav li a.active {
+    color: white;
+    background-color: #006666;
+    transition: 0.2s;
+}
+
+ul.nav li.end {
+    float: right;
+    margin-right: 10px;
+}
+
+.header {
+    height: 200px;
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+    background-image: url('http://lh4.ggpht.com/-Hu5Ja_d4Ppo/UaKps-NecwI/AAAAAAAAMbg/Q2KaixF_j7k/s1024/angkorsite-2%252520%25252834%252529.jpg');
+}
+
+.article {
+    margin: 0 10% 0 10%;
+    background-color: lightblue;
+    overflow: auto;
+    height: 70%;
+}
