@@ -5,6 +5,7 @@
     </head>
     <body>
 <?php
+
 session_start();
 
 if(isset($_POST['submitname'])){ //check login button
@@ -32,7 +33,7 @@ if(!isset($_SESSION['name'])){ //login page
 }else{//in the chat room
  ?>
 <div id='paber'>
-    <div id='header'><?php echo 'Name : '+$_SESSION['name'] ?>
+    <div id='header'><?php echo "Name : ".$_SESSION['name']; ?>
     </div>
 
 
