@@ -3,8 +3,24 @@
     border: 1px solid lightcoral;
     padding: 10px;
     margin: auto;
+    width: 300px;
+}
+
+#header {
+    overflow: hidden;
 }
 
 #logout {
     float: right;
+}
+
+#name {
+    float: left;
+}
+
+#chatbox {
+    width: 250px;
+    height: 300px;
+    border: 1px solid lightcoral;
+    margin: auto;
 }
