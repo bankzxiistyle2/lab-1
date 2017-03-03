@@ -36,11 +36,21 @@ if(!isset($_SESSION['name'])){ //login page
 }else{//in the chat room
  ?>
 <div id='paper'>
+
     <div id='header'>
     <div id='name'><?php echo "Name : ".$_SESSION['name']; ?></div>
     <div id='logout'>logout</div>
     </div>
+
     <div id='chatbox'></div>
+
+    <div id='form'>
+        <form action="" method='POST'>
+            <input type='text' name='detil' id='detil' >
+            <input type='submit' name='entertxt' id='entertxt' value='send'>
+        </form>
+
+    </div>
     
 
 
