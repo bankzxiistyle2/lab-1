@@ -1,7 +1,7 @@
 <html>
     <head>
         <meta charset='UTF-8'>
-        
+        <link rel="stylecheet" type='text/css' href='style.css'>
     </head>
     <body>
 <?php
@@ -35,7 +35,7 @@ if(!isset($_SESSION['name'])){ //login page
     <?php 
 }else{//in the chat room
  ?>
-<div id='paber'>
+<div id='paper'>
     <div id='header'><?php echo "Name : ".$_SESSION['name']; ?><span id='logout'></span>
     </div>
     
