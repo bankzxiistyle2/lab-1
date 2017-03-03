@@ -7,7 +7,10 @@
 <?php
 
 session_start();
-
+if($_GET['logout']){//logout
+    session_destroy();
+    header("Location: index.php");
+}
 if(isset($_POST['submitname'])){ //check login button
     if(isset($_POST['name'])){
         $_SESSION['name']=$_POST['name'];
@@ -33,8 +36,9 @@ if(!isset($_SESSION['name'])){ //login page
 }else{//in the chat room
  ?>
 <div id='paber'>
-    <div id='header'><?php echo "Name : ".$_SESSION['name']; ?>
+    <div id='header'><?php echo "Name : ".$_SESSION['name']; ?><span id='logout'></span>
     </div>
+    
 
 
 </div>
