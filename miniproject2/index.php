@@ -8,11 +8,17 @@
 <body>
     <?php
 
-include('db.php');
-include('MyPost.php');
+
 
 session_start();
+
 if($_GET['logout']){//logout
+include('db.php');
+include('MyPost.php');
+    $db=new MyPost ();
+    $db->connect();
+    $db->logout($_SESSION['name']);
+    $db->close_connect();
     session_destroy();
     header("Location: index.php");
 }
@@ -29,6 +35,7 @@ if(!isset($_SESSION['name'])){ //login page
     ?>
 
         <div id='login'>
+            <br>
             <form action='index.php' method='post'>
                 inter name :
                 <input type='text' name='name' id='name'>
@@ -50,17 +57,15 @@ if(!isset($_SESSION['name'])){ //login page
             </div>
 
             <div id='chatbox'></div>
-
+           <div id='listname'></div>
             <div id='sendform'>
-
                 <input type='text' name='detil' id='detil'>
                 <button type='button' id="send" onclick="detilsend()">send</buttom>
-
-
             </div>
-            <div id=s1></div>
-            <div id=s2></div>
+
+            
         </div>
+        
         <script>
             var higthchatbox=document.getElementById('chatbox').clientHeight;
             var send=document.getElementById('detil');
@@ -95,18 +100,32 @@ if(!isset($_SESSION['name'])){ //login page
 
                 ajax.send("name=<?php echo $_SESSION['name']; ?>&detil=" + txt);
             }
+             function showlistname() {
+                var ajax = new XMLHttpRequest();
+                ajax.onreadystatechange = function() {
+                    if (ajax.readyState == 4 && ajax.status == 200) {
+                        document.getElementById('listname').innerHTML = ajax.responseText;
+                    }
+                }
+                ajax.open('POST', 'listname.php', true);
+                ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+                ajax.send("name=<?php echo $_SESSION['name']; ?>");
+            }
             function ajax() {
                 var ajax = new XMLHttpRequest();
                 ajax.onreadystatechange = function() {
                     if (ajax.readyState == 4 && ajax.status == 200) {
                         document.getElementById('chatbox').innerHTML = ajax.responseText;
+                        autoscroll();
                     }
                 }
                 ajax.open('POST', 'chat.php', true);
                 ajax.send();
             }
-            setInterval(ajax,1000);
             
+            setInterval(ajax,1000);
+            setInterval(showlistname,1000);
         </script>
         <?php
 }

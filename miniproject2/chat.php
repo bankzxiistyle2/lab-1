@@ -11,7 +11,7 @@
     // output data of each row
     while($row = mysqli_fetch_array($db->result)) {
         echo "<div class='post '>";
-        echo " <div >" . $row["MyPost_name"]." : ". "  " . $row["MyPost_detil"]. "</div>";
+        echo " <div ><sub style='font-size:10px;'>(".$row['MyPost_date'] .")</sub> ". $row["MyPost_name"]." : ". "  " . $row["MyPost_detil"]. "</div>";
         echo "</div> <br>";
     }
 
