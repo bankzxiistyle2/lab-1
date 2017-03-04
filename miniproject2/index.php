@@ -12,6 +12,8 @@
 
 session_start();
 
+
+
 if($_GET['logout']){//logout
 include('db.php');
 include('MyPost.php');
@@ -25,9 +27,7 @@ include('MyPost.php');
 if(isset($_POST['submitname'])){ //check login button
     if(isset($_POST['name'])){
         $_SESSION['name']=$_POST['name'];
-        echo '<script type="text/javascript">alert("login complete");</script>';
-    }else{
-        echo '<script type="text/javascript">alert("error to login");</script>';
+        
     }
 }
 
@@ -56,11 +56,14 @@ if(!isset($_SESSION['name'])){ //login page
                 <div id='logout'><a href='index.php?logout=true'>logout</a></div>
             </div>
 
-            <div id='chatbox'></div>
-           <div id='listname'></div>
+            <div id='chatbox' class='container'></div>
+            <div id='listname'></div>
             <div id='sendform'>
-                <input type='text' name='detil' id='detil'>
-                <button type='button' id="send" onclick="detilsend()">send</buttom>
+                
+                <input type='text' name='detil' id='detil' onkeyup="count()" maxlength="100">
+                <button type='button' id="send" onclick="detilsend()">send</button><br>
+                <sub id='counttxt'>You can input lenght string : 100</sub>
+
             </div>
 
             
@@ -74,8 +77,10 @@ if(!isset($_SESSION['name'])){ //login page
                     detilsend();
                 }
             });
-
-            
+           function count() {
+                 var l=document.getElementById('detil').value.length;
+                 document.getElementById('counttxt').innerHTML="You can input lenght string : "+(100-l);
+            }
             function autoscroll(){
                  document.getElementById('chatbox').scrollTop=document.getElementById('chatbox').scrollHeight;
             }
