@@ -52,19 +52,32 @@ if(!isset($_SESSION['name'])){ //login page
             <div id='chatbox'></div>
 
             <div id='sendform'>
-                <form id="gg" method='POST' action>
-                    <input type='text' name='detil' id='detil'>
-                    <input type='submit' name='entertxt' id='entertxt' value='send' onclick=''>
-                </form>
+
+                <input type='text' name='detil' id='detil'>
+                <button type='button' id="send" onclick="send()">send</buttom>
+
 
             </div>
             <div id=s1></div>
             <div id=s2></div>
         </div>
         <script>
+            var send=document.getElementById('detil');
+            send.addEventListener("keydown", function (e) {
+                 if (e.keyCode === 13) {  //checks whether the pressed key is "Enter"
+                 send();
+                }
+            });
             
 
-            function insertData() {
+            function send() {
+                var txt = "";
+                txt += document.getElementById('detil').value;
+                document.getElementById('detil').value="";
+                insertData(txt);
+            }
+
+            function insertData(txt) {
                 var ajax = new XMLHttpRequest();
                 ajax.onreadystatechange = function() {
                     if (ajax.readyState == 4 && ajax.status == 200) {
@@ -74,7 +87,7 @@ if(!isset($_SESSION['name'])){ //login page
                 ajax.open('POST', 'insert.php', true);
                 ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
-                ajax.send("name=<?php echo $_SESSION['name']; ?>&detil=<?php echo $_POST['detil'] ?>");
+                ajax.send("name=<?php echo $_SESSION['name']; ?>&detil=" + txt);
             }
         </script>
         <?php
