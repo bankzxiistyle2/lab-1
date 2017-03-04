@@ -54,7 +54,7 @@ if(!isset($_SESSION['name'])){ //login page
             <div id='sendform'>
 
                 <input type='text' name='detil' id='detil'>
-                <button type='button' id="send" onclick="send()">send</buttom>
+                <button type='button' id="send" onclick="detilsend()">send</buttom>
 
 
             </div>
@@ -63,14 +63,14 @@ if(!isset($_SESSION['name'])){ //login page
         </div>
         <script>
             var send=document.getElementById('detil');
-            send.addEventListener("keydown", function (e) {
-                 if (e.keyCode === 13) {  //checks whether the pressed key is "Enter"
-                 send();
+            send.addEventListener("keydown",function (e){
+                if(e.keyCode==13){
+                    detilsend();
                 }
             });
             
-
-            function send() {
+            
+            function detilsend() {
                 var txt = "";
                 txt += document.getElementById('detil').value;
                 document.getElementById('detil').value="";
