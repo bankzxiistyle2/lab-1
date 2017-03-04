@@ -12,7 +12,7 @@
     
     while($row = mysqli_fetch_array($db->result)) {
         
-        echo "<sub style='font-size:10px;'>(".$row['MyPost_date'] .")</sub> ". $row["MyPost_name"]." : ". "  " . $row["MyPost_detil"]. "<br>";
+        echo $row["MyPost_name"]." : ". "  " . $row["MyPost_detil"]. "<br>"."<span style='font-size:10px;'>(".$row['MyPost_date'] .")</span><br>";
        
     }
     

@@ -36,10 +36,14 @@ if(!isset($_SESSION['name'])){ //login page
 
         <div id='login'>
             <br>
+            <h1 id='titlelogin'>Login page</h1>
+            <br>
             <form action='index.php' method='post'>
-                inter name :
-                <input type='text' name='name' id='name'>
-                <input type='submit' name='submitname' id='submitname'>
+             Name : 
+            <input  type='text' name='name' id='name'><br><br>
+             Mail : 
+            <input type='email' name='email' id='email'><br><br>
+            <input type='submit' value='login' name='submitname' id='submitname'>
 
             </form>
         </div>
@@ -56,7 +60,7 @@ if(!isset($_SESSION['name'])){ //login page
                 <div id='logout'><a href='index.php?logout=true'>logout</a></div>
             </div>
 
-            <div id='chatbox' class='container'></div>
+            <div id='chatbox'></div>
             <div id='listname'></div>
             <div id='sendform'>
                 
