@@ -6,6 +6,9 @@
     <body>
 <?php
 
+include('db.php');
+include('MyPost.php');
+
 session_start();
 if($_GET['logout']){//logout
     session_destroy();
@@ -19,7 +22,12 @@ if(isset($_POST['submitname'])){ //check login button
         echo '<script type="text/javascript">alert("error to login");</script>';
     }
 }
-
+if(isset($_POST['entertxt'])){
+    if(isset($_POST['detil'])){
+        $db=new MyPost();
+        $db->insert($_SESSION['name'],$_POST['detil']);
+    }
+}
 if(!isset($_SESSION['name'])){ //login page 
     ?>
 
@@ -52,8 +60,6 @@ if(!isset($_SESSION['name'])){ //login page
 
     </div>
     
-
-
 </div>
 <?php
 }
