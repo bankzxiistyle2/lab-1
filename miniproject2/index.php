@@ -62,20 +62,26 @@ if(!isset($_SESSION['name'])){ //login page
             <div id=s2></div>
         </div>
         <script>
+            var higthchatbox=document.getElementById('chatbox').clientHeight;
             var send=document.getElementById('detil');
             send.addEventListener("keydown",function (e){
                 if(e.keyCode==13){
                     detilsend();
                 }
             });
+
             
-            
+            function autoscroll(){
+                 document.getElementById('chatbox').scrollTop=document.getElementById('chatbox').scrollHeight;
+            }
             function detilsend() {
                 var txt = "";
                 txt += document.getElementById('detil').value;
                 document.getElementById('detil').value="";
                 insertData(txt);
+                
             }
+
 
             function insertData(txt) {
                 var ajax = new XMLHttpRequest();
@@ -89,6 +95,18 @@ if(!isset($_SESSION['name'])){ //login page
 
                 ajax.send("name=<?php echo $_SESSION['name']; ?>&detil=" + txt);
             }
+            function ajax() {
+                var ajax = new XMLHttpRequest();
+                ajax.onreadystatechange = function() {
+                    if (ajax.readyState == 4 && ajax.status == 200) {
+                        document.getElementById('chatbox').innerHTML = ajax.responseText;
+                    }
+                }
+                ajax.open('POST', 'chat.php', true);
+                ajax.send();
+            }
+            setInterval(ajax,1000);
+            
         </script>
         <?php
 }
