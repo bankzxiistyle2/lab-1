@@ -39,12 +39,12 @@ if(!isset($_SESSION['name'])){ //login page
 
     <div id='header'>
     <div id='name'><?php echo "Name : ".$_SESSION['name']; ?></div>
-    <div id='logout'>logout</div>
+    <div id='logout'><a href='index.php?logout=true'>logout</a></div>
     </div>
 
     <div id='chatbox'></div>
 
-    <div id='form'>
+    <div id='sendform'>
         <form action="" method='POST'>
             <input type='text' name='detil' id='detil' >
             <input type='submit' name='entertxt' id='entertxt' value='send'>
